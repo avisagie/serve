@@ -54,5 +54,5 @@ func main() {
 	
 	// start serving
 	log.Printf("Listening on %s, serving in %s", *listenAddr, cwd)
-	http.ListenAndServe(*listenAddr, nil)
+	log.Fatal(http.ListenAndServe(*listenAddr, nil))
 }
